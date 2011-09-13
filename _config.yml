@@ -1,6 +1,10 @@
 markdown: rdiscount
 pygments: true
-exclude: ['README.textile', 'config.rb', 'sass']
+exclude: ["README.textile", "config.rb", "sass"]
 
 author: Andreas Karlsson
+email: andreas.karlsson@indiebytes.se
 description: Lorem ipsum
+
+permalink: /post/:title.html
+paginate: 5
