@@ -6,6 +6,7 @@ author: Andreas Karlsson
 email: andreas.karlsson@indiebytes.se
 
 url: http://indiebytes.github.com
+title: Andreas Karlsson
 description: Lorem ipsum
 permalink: /post/:title.html
 paginate: 5
