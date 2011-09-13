@@ -4,7 +4,8 @@ exclude: ["README.textile", "config.rb", "sass"]
 
 author: Andreas Karlsson
 email: andreas.karlsson@indiebytes.se
-description: Lorem ipsum
 
+url: http://indiebytes.github.com
+description: Lorem ipsum
 permalink: /post/:title.html
 paginate: 5
