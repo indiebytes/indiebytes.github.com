@@ -1,5 +1,6 @@
 markdown: rdiscount
 pygments: true
+exclude: ['README.textile', 'config.rb', 'sass']
 
 author: Andreas Karlsson
 description: Lorem ipsum
