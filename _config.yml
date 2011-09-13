@@ -1,2 +1,5 @@
 markdown: rdiscount
 pygments: true
+
+author: Andreas Karlsson
+description: Lorem ipsum
