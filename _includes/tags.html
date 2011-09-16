@@ -1,0 +1,8 @@
+{% if page.tags != empty %}
+    <dl class="tags">
+        <dt>Tags:</dt>
+        {% for tag in page.tags  %}
+        <dd>#{{ tag }}</dd>
+        {% endfor %}
+    </dl>
+{% endif %}

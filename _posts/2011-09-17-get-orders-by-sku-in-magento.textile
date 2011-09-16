@@ -1,0 +1,20 @@
+---
+layout: post
+
+title: Get orders by SKU in Magento
+description: Recently I have been asked to get orders from Magento based on a certain product's SKU. It's not tricky in any way...
+
+header: Get orders by SKU in Magento
+
+tags: magento mysql
+---
+
+Recently I have been asked to get orders from Magento based on a certain product's SKU. It's not tricky in any way, just run the following query in MySQL:
+
+{% highlight mysql %}
+SELECT tbl_order.increment_id
+FROM sales_flat_order_item AS tbl_item
+LEFT JOIN sales_flat_order AS tbl_order
+    ON tbl_order.entity_id = tbl_item.order_id
+WHERE tbl_item.sku = "SKU-12345";
+{% endhighlight %}

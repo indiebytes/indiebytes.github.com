@@ -4,9 +4,11 @@ exclude: ["README.textile", "config.rb", "sass"]
 
 author: Andreas Karlsson
 email: andreas.karlsson@indiebytes.se
+github: indiebytes
+twitter: andk
 
 url: http://indiebytes.github.com
 title: Andreas Karlsson
-description: Lorem ipsum
+description: Andreas Karlsson is a web developer living and working in Stockholm, Sweden. On this blog he writes on web development.
 permalink: /post/:title.html
-paginate: 5
+future: false

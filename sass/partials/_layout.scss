@@ -1,0 +1,222 @@
+@import "partials/base";
+
+body {
+    background: #fff;
+    color: #000;
+    /* 16px / 24px */
+    font-size: $font-size / 16 * 1em;
+    line-height: #{$line / $em}em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+h1 { font-size: 3em }
+h2 { font-size: 2em; font-weight: 700 }
+h3 { font-size: 2em }
+h4 { font-size: 1.5em; font-weight: 700 }
+h5 { font-size: 1.5em }
+h6 { font-size: 1.25em; font-weight: 700 }
+
+a { color: #d7432e; }
+a:visited { color: #d7432e; }
+
+[role="banner"],
+[role="main"],
+[role="contentinfo"] {
+    @include box-sizing(border-box);
+    @include clearfix;
+    margin: 0 $column;
+    padding: 0 #{($line/2)/$em}em;
+}
+
+[role="banner"] {
+    margin-bottom: #{($line)/$em}em!important;
+    padding-bottom: #{($line)/$em}em!important;
+    #logo {
+        font-size: 1em;
+        margin: 0;
+        padding: 0;
+        text-indent: -9999px;
+    }
+    #tagline {
+        color: #333;
+        font-size: 1em;
+        font-weight: 200;
+        padding-bottom: #{($line/4)/$em}em;
+        a {
+            color: #000;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        span { white-space: nowrap; }
+    }   
+}
+
+[role="contentinfo"] {
+    font-size: 0.75em;
+    font-weight: 200;
+    margin-top: #{($line)/$em}em!important;
+}
+
+/* @media screen and (min-width: 640px) */
+@media screen and (min-width: 40em) {
+    article.single {
+        header {
+            h1 {
+                font-size: 4.5em!important;
+                line-height: 1.25;
+            }
+        }
+    }
+}
+
+
+
+/*
+ *
+ *  Eight-column grid active
+ *  ----------------------------------------------------------------------
+ *  Margin   | #  1     2     3     4     5     6     7     8   |   Margin
+ *  5.55555% | %  12.5  25.0  37.5  50.0  62.5  75.0  87.5  100 | 5.55555%
+ *
+ *
+ */
+
+/* @media screen and (min-width: 720px) */
+@media screen and (min-width: 45em) {
+    body {
+        margin: 0 auto;
+        width: 45em;
+    }
+    #author {
+        padding-right: 37.5%;
+    }
+}
+
+
+
+/*
+ *
+ *  Sixteen-column grid active
+ *  ----------------------------------------------------------------------------------------------------------------------
+ *  Margin   | #  1     2     3     4     5     6     7     8     9     10    11    12    13    14    15    16  |   Margin
+ *  5.55555% | %  6.25  12.5  18.75 25.0  31.25 37.5  43.75 50.0  56.25 62.5  68.75 75.0  81.25 87.5  93.75 100 | 5.55555%
+ *
+ *
+ */
+
+/* @media screen and (min-width: 1872px) */
+@media screen and (min-width: 117em) {
+
+}
+
+
+
+h2.section {
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+article {
+    header {
+        time {
+            font-weight: 200;
+            text-transform: uppercase;
+            color: #777;
+        }
+        h1 {
+            font-size: 3em;
+            line-height: 1.25;
+            font-weight: 700;
+        }
+        dl.tags {
+            @include clearfix;
+            list-style: none;
+            margin: 0 0 #{($line)/$em}em;
+            dt {
+                color: #777;
+                float: left;
+                padding: 0 #{($line/2)/$em}em 0 0;
+                font-weight: 200;
+                margin-top: #{($line/2)/$em}em;
+                text-transform: uppercase;
+            }    
+            dd {
+                background: #d7432e;
+                color: #fff;
+                font-weight: 200;
+                float: left;
+                margin: #{($line/2)/$em}em #{($line/2)/$em}em 0 0;
+                padding: 0 #{($line/4)/$em}em;
+            }
+        }
+    }
+    .intro {
+        font-size: 1.25em;
+        line-height: 1.5;
+        margin-bottom: 1.5em;
+    }
+    footer {
+        margin-top: #{($line*2)/$em}em;
+        nav {
+            ul {
+                background: #e3e3e3;
+                border: 0.125em solid #e3e3e3;
+
+                @include clearfix;
+                margin: 0 0 2em;
+                padding: 0;
+                li {
+                    float: left;
+                    margin: 0;
+                    padding: 0;
+                    text-align: center;
+                    width: 50%;
+                    a, span {
+                        @include box-sizing(border-box);
+                        display: block;
+                        height: 100%;
+                        padding: #{($line/2)/$em}em #{($line)/$em}em;
+                        line-height: 1.5;    
+                    }
+                    a { text-decoration: none; }
+                    a:hover { background: #e3e3e3 * 0.75; color: #000; }
+                    span { color: #e3e3e3 * 0.75; }
+                }
+            }
+        }
+    }
+}
+
+.posts {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    > li {
+        padding: #{($line/2)/$em}em 0;
+        article {
+            font-size: 0.75em;
+            header {
+                h1 {
+                    font-size: 2em;
+                    a {
+                        color: #000;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.highlight {
+    background: #f4f4f4;
+    font-size: 0.75em;
+    margin: 1em 0;
+    padding: #{$line/$em/8}em #{$line/$em}em;
+}

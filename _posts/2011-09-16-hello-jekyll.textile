@@ -1,0 +1,29 @@
+---
+layout: post
+
+title: Hello Jekyll!
+description: It's my 28th birthday and I'm celebrating by publishing the blog I've been about to start for so long now.
+
+header: Hello Jekyll!
+
+tags: jekyll ruby github compass
+---
+
+<p class="intro">It's my 28th birthday and I'm celebrating by publishing the blog I've been about to start for so long now. This will be the first time that I blog in English, so please bear with me.</p>
+
+After some research I decided to give "Jekyll":https://github.com/mojombo/jekyll/ a try. Up and running in no time!
+
+And I love the fact that I from now on will write blog posts in "Textile":http://www.textism.com/tools/textile/ with "TextMate":http://macromates.com/ and simply publish them by pushing to "GitHub":https://github.com/.
+
+The blog won't have any comment form, please make a comment and mention me -- "@andk":http://twitter.com/andk -- on Twitter instead.
+
+h2. Thank you
+
+These people have been my source of inspiration for choosing Jekyll as platform:
+
+* "Tom Preston-Werner":http://tom.preston-werner.com/2008/11/17/blogging-like-a-hacker.html
+* "Paul Stamatiou":http://paulstamatiou.com/how-to-wordpress-to-jekyll
+
+... and this guy should get some credits for his "fluid CSS grid"::http://goldengridsystem.com/ that I've started to implement using "Compass":http://compass-style.org:
+
+* "Joni Korpi":http://goldengridsystem.com/

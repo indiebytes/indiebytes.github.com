@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<article id="post" class="single">
+    <header>
+        <time datetime="{{ page.date }}">{{ page.date | date_to_string }}</time>
+        <h1>{% if page.header %}{{ page.header }}{% else %}{{ page.title }}{% endif %}</h1>
+        {% include tags.html %}
+    </header>
+    {{ content }}
+    {% if page.previous or page.next %}
+    <footer>
+        <nav>
+            <ul id="next-previous">
+                <li>
+                    {% if page.previous %}
+                    <a href="{{ site.base_url }}{{ page.previous.url }}" class="previous" title="Previous entry: {{ page.previous.title }}">&larr;</a>
+                    {% else %}
+                    <span class="previous">&larr;</span>
+                    {% endif %}
+                </li>
+                <li>
+                    {% if page.next %}
+                    <a href="{{ site.base_url }}{{ page.next.url }}" class="next" title="Next entry: {{ page.next.title }}">&rarr;</a>
+                    {% else %}
+                    <span class="next">&rarr;</span>
+                    {% endif %}
+                </li>
+            </ul>
+        </nav>
+    </footer>
+    {% endif %}
+</article>

@@ -7,18 +7,34 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title></title>
-    <meta name="description" content="{{ site.description }}">
+    <title>{{ page.title }}</title>
+
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     <meta name="author" content="{{ site.author }}">
 
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <title>{{ page.title }}</title>
-
-    <link rel="stylesheet" href="stylesheets/screen.css">
+    <link rel="stylesheet" href="/stylesheets/screen.css">
     <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
 </head>
     <body>
-        {{ content }}
+        <header role="banner">
+            <hgroup>
+                <h1 id="logo"><a href="/">{{ site.title }}</a></h1>
+                <h2 id="tagline"><a href="/"><strong>{{ site.author }}</strong></a> <span>on web development</span></h2>
+            </hgroup>
+        </header>
+
+        <div role="main">
+            {{ content }}
+        </div>
+
+        <footer role="contentinfo">
+            <p>
+                <a href="http://twitter.com/{{ site.twitter }}">Follow me on Twitter</a> &bull;
+                <a href="https://github.com/{{ site.github }}">Fork me at GitHub</a> &bull;
+                <a href="/atom.xml">Article feed</a>
+            </p>
+        </footer>
     </body>
 </html>
